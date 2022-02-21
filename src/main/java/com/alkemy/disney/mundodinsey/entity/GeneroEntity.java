@@ -9,18 +9,17 @@ import javax.persistence.*;
 @Table(name = "Genero")
 @Getter
 @Setter
-
 public class GeneroEntity {
+
     @Id
     @Column
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
-
     private long id;
+
     private String imagen;
+
     private String nombre;
 
-    @OneToMany (fetch = FetchType.EAGER, cascade = CascadeType.ALL)
-    private PeliculaEntity pelicula;
 
 
 
